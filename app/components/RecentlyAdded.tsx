@@ -1,5 +1,6 @@
 import Image from "next/image";
 import prisma from "../utils/db";
+import { MovieCard } from "./MovieCard";
 
 async function getData() {
   const data = await prisma.movie.findMany({
@@ -9,7 +10,7 @@ async function getData() {
       title: true,
       WatchLists: true,
       imageString: true,
-      videoSource: true,
+      youtubeString: true,
     },
     orderBy: {
       createdAt: "desc",
@@ -20,7 +21,7 @@ async function getData() {
 }
 export default async function RecentlyAdded() {
   const data = await getData();
-  
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-8 gap-6">
       {data.map((movie) => (
@@ -31,6 +32,15 @@ export default async function RecentlyAdded() {
             width={500}
             height={400}
             className="rounded-sm absolute w-full h-full object-cover"
+          />
+          <MovieCard
+            movieId={movie.id}
+            overview={movie.overview}
+            title={movie.title}
+            watchListId={movie.WatchLists[0]?.id}
+            youtubeUrl={movie.youtubeString}
+            watchList={movie.WatchLists.length > 0 ? true: false}
+            key={movie.id}
           />
         </div>
       ))}
