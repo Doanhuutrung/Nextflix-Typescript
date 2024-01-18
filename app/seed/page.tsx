@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import prisma from "../utils/db";
+import PlayVideoModal from "../components/PlayVideoModal";
 
 export default function SeedDatabase() {
   async function postData() {
@@ -8,29 +9,30 @@ export default function SeedDatabase() {
       data: [
         {
           id: 0,
-          title: "The Marvels",
+          title: "Gran Turismo",
           age: 12,
           duration: 2.15,
           overview:
-            "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol’s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
-          videoSource: "https://www.youtube.com/embed/3sHHCG1JDL8",
+            "The ultimate wish-fulfillment tale of a teenage Gran Turismo player whose gaming skills won him a series of Nissan competitions to become an actual professional racecar driver.",
+          videoSource:
+            "https://utfs.io/f/916e1354-a1b6-4832-97ab-9fa95876b91a-bnyedt.mp4",
           imageString:
-            "https://media.themoviedb.org/t/p/w533_and_h300_bestv2/97f3Y0VKFVweh5SZK7KSaTZmJBn.jpg",
+            "https://image.tmdb.org/t/p/original/r7DuyYJ0N3cD8bRKsR5Ygq2P7oa.jpg",
           release: 2023,
           category: "recent",
-          youtubeString: "https://www.youtube.com/embed/uwmDH12MAA4",
+          youtubeString: "https://www.youtube.com/embed/GVPzGBvPrzw",
         },
         {
-          id: 1,
+          imageString:
+            "https://image.tmdb.org/t/p/original/kHlX3oqdD4VGaLpB8O78M25KfdS.jpg",
           title: "A Haunting in Venice",
           age: 12,
           duration: 1.44,
+          id: 1,
           overview:
             "Celebrated sleuth Hercule Poirot, now retired and living in self-imposed exile in Venice, reluctantly attends a Halloween séance at a decaying, haunted palazzo. When one of the guests is murdered, the detective is thrust into a sinister world of shadows and secrets.",
           release: 2023,
-          imageString:
-            "https://image.tmdb.org/t/p/original/kHlX3oqdD4VGaLpB8O78M25KfdS.jpg",
-          videoSource: "https://www.youtube.com/embed/JJL5Dyf79Gg",
+          videoSource: "",
           category: "recent",
           youtubeString: "https://www.youtube.com/embed/yEddsSwweyE",
         },
@@ -42,7 +44,7 @@ export default function SeedDatabase() {
           overview:
             "Recently fired and desperate for work, a troubled young man named Mike agrees to take a position as a night security guard at an abandoned theme restaurant: Freddy Fazbear's Pizzeria. But he soon discovers that nothing at Freddy's is what it seems.",
           release: 2023,
-          videoSource: "https://www.youtube.com/embed/0VH9WCFV6XQ",
+          videoSource: "",
           imageString:
             "https://image.tmdb.org/t/p/original/t5zCBSB5xMDKcDqe91qahCOUYVV.jpg",
           category: "recent",
@@ -53,12 +55,12 @@ export default function SeedDatabase() {
           id: 3,
           title: "The Blacklist",
           age: 16,
-          duration: 0,
+          duration: 2,
           imageString:
             "https://image.tmdb.org/t/p/original/dDPwCyZG8arYwMDoQl0sm4xccCE.jpg",
           overview: `Raymond "Red" Reddington, one of the FBI's most wanted fugitives, surrenders in person at FBI Headquarters in Washington, D.C. He claims that he and the FBI have the same interests: bringing down dangerous criminals and terrorists. In the last two decades, he's made a list of criminals and terrorists that matter the most but the FBI cannot find because it does not know they exist. Reddington calls this "The Blacklist". Reddington will co-operate, but insists that he will speak only to Elizabeth Keen, a rookie FBI profiler`,
           release: 2013,
-          videoSource: "https://www.youtube.com/embed/JGBIimq1I3A",
+          videoSource: "",
           category: "show",
           youtubeString: "https://www.youtube.com/embed/-WYdUaK54fU",
         },
@@ -66,13 +68,13 @@ export default function SeedDatabase() {
           id: 4,
           title: "Suits",
           age: 12,
-          duration: 0,
+          duration: 2,
           imageString:
             "https://image.tmdb.org/t/p/original/or0E36KfzJYZwqXeiCfm1JgepKF.jpg",
           overview:
             "While running from a drug deal gone bad, Mike Ross, a brilliant young college-dropout, slips into a job interview with one of New York City's best legal closers, Harvey Specter. Tired of cookie-cutter law school grads, Harvey takes a gamble by hiring Mike on the spot after he recognizes his raw talent and photographic memory.",
           release: 2011,
-          videoSource: "https://www.youtube.com/embed/Ab2YIbP5xw8",
+          videoSource: "",
           category: "show",
           youtubeString: "https://www.youtube.com/embed/85z53bAebsI",
         },
@@ -80,13 +82,13 @@ export default function SeedDatabase() {
           id: 5,
           title: "Chernobyl",
           age: 16,
-          duration: 0,
+          duration: 10,
           imageString:
             "https://image.tmdb.org/t/p/original/900tHlUYUkp7Ol04XFSoAaEIXcT.jpg",
           overview:
             "The true story of one of the worst man-made catastrophes in history: the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.",
           release: 2019,
-          videoSource: "https://www.youtube.com/watch?v=G8xJb6-ZNKM",
+          videoSource: "",
           category: "show",
           youtubeString: "https://www.youtube.com/embed/s9APLXM9Ei8",
         },
@@ -123,7 +125,7 @@ export default function SeedDatabase() {
           id: 8,
           title: "Coco",
           release: 2017,
-          age: 0,
+          age: 10,
           duration: 1.45,
           imageString:
             "https://image.tmdb.org/t/p/original/askg3SMvhqEl4OL52YuvdtY40Yb.jpg",
@@ -138,7 +140,7 @@ export default function SeedDatabase() {
           title: "Monk",
           release: 2002,
           age: 12,
-          duration: 0,
+          duration: 12,
           imageString:
             "https://image.tmdb.org/t/p/original/cTQYB39EwM01fl9b9KpNUgZfOsT.jpg",
           overview:
@@ -151,7 +153,7 @@ export default function SeedDatabase() {
           id: 10,
           title: "Family Guy",
           age: 16,
-          duration: 0,
+          duration: 2,
           imageString:
             "https://image.tmdb.org/t/p/original/y4PDksvxM05sNxacoU8xIYITCDA.jpg",
           overview:
