@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { PlayCircle } from "lucide-react";
 
@@ -19,11 +19,11 @@ export function MovieCard({
   watchListId,
   youtubeUrl,
 }: iAppProps) {
-  return(
+  return (
     <>
-    <button className="-mt-14">
-      <PlayCircle className="h-20 w-20" />
-    </button>
+      <button className="mt-14 ml-24">
+        <PlayCircle className="h-20 w-20" />
+      </button>
     </>
   );
 }

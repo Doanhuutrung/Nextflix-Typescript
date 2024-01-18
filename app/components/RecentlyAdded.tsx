@@ -33,15 +33,17 @@ export default async function RecentlyAdded() {
             height={400}
             className="rounded-sm absolute w-full h-full object-cover"
           />
-          <MovieCard
-            movieId={movie.id}
-            overview={movie.overview}
-            title={movie.title}
-            watchListId={movie.WatchLists[0]?.id}
-            youtubeUrl={movie.youtubeString}
-            watchList={movie.WatchLists.length > 0 ? true: false}
-            key={movie.id}
-          />
+          <div className="h-60 relative z-10 w-full transform transition duration-500 hover:scale-125 opacity-0 hover:opacity-100">
+            <MovieCard
+              movieId={movie.id}
+              overview={movie.overview}
+              title={movie.title}
+              youtubeUrl={movie.youtubeString}
+              watchListId={movie.WatchLists[0]?.id}
+              watchList={movie.WatchLists.length > 0 ? true : false}
+              key={movie.id}
+            />
+          </div>
         </div>
       ))}
     </div>
