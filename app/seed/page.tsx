@@ -53,16 +53,16 @@ export default function SeedDatabase() {
 
         {
           id: 3,
-          title: "The Blacklist",
+          title: "The Arcane",
           age: 16,
           duration: 2,
           imageString:
-            "https://image.tmdb.org/t/p/original/dDPwCyZG8arYwMDoQl0sm4xccCE.jpg",
-          overview: `Raymond "Red" Reddington, one of the FBI's most wanted fugitives, surrenders in person at FBI Headquarters in Washington, D.C. He claims that he and the FBI have the same interests: bringing down dangerous criminals and terrorists. In the last two decades, he's made a list of criminals and terrorists that matter the most but the FBI cannot find because it does not know they exist. Reddington calls this "The Blacklist". Reddington will co-operate, but insists that he will speak only to Elizabeth Keen, a rookie FBI profiler`,
-          release: 2013,
+            "https://image.tmdb.org/t/p/original/rvIaig65jIRrBI69LRCeO4u8Cja.jpg",
+          overview: `Amid the stark discord of twin cities Piltover and Zaun, two sisters fight on rival sides of a war between magic technologies and clashing convictions.`,
+          release: 2022,
           videoSource: "",
           category: "show",
-          youtubeString: "https://www.youtube.com/embed/-WYdUaK54fU",
+          youtubeString: "https://www.youtube.com/embed/fXmAurh012s",
         },
         {
           id: 4,
