@@ -9,7 +9,7 @@ export async function addTowatchlist(formData: FormData) {
   "use server";
 
   const movieId = formData.get("movieId");
-  const pathname = formData.get("pathname") as string;
+  const pathName = formData.get("pathName") as string;
   const session = await getServerSession(authOptions);
 
   const data = await prisma.watchList.create({
@@ -19,20 +19,20 @@ export async function addTowatchlist(formData: FormData) {
     },
   });
 
-  revalidatePath(pathname);
+  revalidatePath(pathName);
 }
 
 export async function deleteFromWatchlist(formData: FormData) {
   "use server";
 
-  const watchListId = formData.get("watchListId") as string;
-  const pathname = formData.get("pathname") as string;
+  const WatchListId = formData.get("WatchListId") as string;
+  const pathName = formData.get("pathName") as string;
 
   const data = await prisma.watchList.delete({
     where: {
-      id: watchListId,
+      id: WatchListId,
     },
   });
 
-  revalidatePath(pathname);
+  revalidatePath(pathName);
 }
