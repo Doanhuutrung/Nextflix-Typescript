@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Account {
-  id                String  @id @default(cuid())
+  id                String  @id @default(cuid()) @db.Char(30)
   userId            String
   type              String
   provider          String
@@ -30,6 +30,7 @@ model Account {
 
   @@unique([provider, providerAccountId])
 }
+
 model Movie {
   id            Int         @id
   imageString   String
