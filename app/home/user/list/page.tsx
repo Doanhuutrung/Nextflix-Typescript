@@ -29,7 +29,7 @@ async function getData(userId: string) {
   return data;
 }
 
-export default async function Watchlist() {
+export default async function watchList() {
   const session = await getServerSession(authOptions);
   const data = await getData(session?.user?.email as string);
   return (
