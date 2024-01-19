@@ -31,7 +31,7 @@ export function MovieCard({
   time,
 }: iAppProps) {
   const [open, setOpen] = useState(false);
-  const pathName = usePathname();
+  const pathname = usePathname();
   return (
     <>
       <button onClick={() => setOpen(true)} className="-mt-14 ">
@@ -41,7 +41,7 @@ export function MovieCard({
         {watchList ? (
           <form action={deleteFromWatchlist}>
             <input type="hidden" name="watchlistId" value={watchListId} />
-            <input type="hidden" name="pathname" value={pathName} />
+            <input type="hidden" name="pathname" value={pathname} />
             <Button variant="outline" size="icon">
               <Heart className="h-4 w-4 text-red-500" />
             </Button>
@@ -49,7 +49,7 @@ export function MovieCard({
         ) : (
           <form action={addTowatchlist}>
             <input type="hidden" name="movieId" value={movieId} />
-            <input type="hidden" name="pathname" value={pathName} />
+            <input type="hidden" name="pathname" value={pathname} />
             <Button variant="outline" size="icon">
               <Heart className="h-4 w-4" />
             </Button>

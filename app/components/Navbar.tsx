@@ -21,7 +21,7 @@ const links: linkProps[] = [
 ];
 
 export default function Navbar() {
-  const pathName = usePathname();
+  const pathname = usePathname();
   return (
     <div className="w-full max-w-7xl mx-auto items-center justify-between px-5 sm:px-6 py-5 lg:px-8 flex">
       <div className="flex items-center">
@@ -31,7 +31,7 @@ export default function Navbar() {
         <ul className="lg:flex gap-x-4 ml-14 hidden">
           {links.map((link, idx) => (
             <div key={idx}>
-              {pathName === link.href ? (
+              {pathname === link.href ? (
                 <li>
                   <Link
                     href={link.href}
