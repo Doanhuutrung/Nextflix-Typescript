@@ -25,12 +25,12 @@ export async function addTowatchlist(formData: FormData) {
 export async function deleteFromWatchlist(formData: FormData) {
   "use server";
 
-  const watchListId = formData.get("watchListId") as string;
+  const watchlistId = formData.get("watchlistId") as string;
   const pathname = formData.get("pathname") as string;
 
   const data = await prisma.watchList.delete({
     where: {
-      id: watchListId,
+      id: watchlistId,
     },
   });
 
