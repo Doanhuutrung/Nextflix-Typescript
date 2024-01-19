@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import GithubSignInButton from "@/app/components/GithubSignInButton";
 import GoogleSignInButton from "@/app/components/GoogleSignInButton";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/utils/auth";
@@ -41,7 +40,6 @@ export default async function SignUp() {
       </div>
 
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
-        <GithubSignInButton />
         <GoogleSignInButton />
       </div>
     </div>
