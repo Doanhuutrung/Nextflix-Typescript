@@ -23,12 +23,12 @@ export default function SeedDatabase() {
           youtubeString: "https://www.youtube.com/embed/GVPzGBvPrzw",
         },
         {
-          imageString:
-            "https://image.tmdb.org/t/p/original/kHlX3oqdD4VGaLpB8O78M25KfdS.jpg",
+          id: 1,
           title: "A Haunting in Venice",
           age: 12,
           duration: 1.44,
-          id: 1,
+          imageString:
+            "https://image.tmdb.org/t/p/original/kHlX3oqdD4VGaLpB8O78M25KfdS.jpg",
           overview:
             "Celebrated sleuth Hercule Poirot, now retired and living in self-imposed exile in Venice, reluctantly attends a Halloween séance at a decaying, haunted palazzo. When one of the guests is murdered, the detective is thrust into a sinister world of shadows and secrets.",
           release: 2023,
@@ -162,6 +162,34 @@ export default function SeedDatabase() {
           videoSource: "",
           category: "show",
           youtubeString: "https://www.youtube.com/embed/7hRxWGo49oc",
+        },
+        {
+          id: 11,
+          title: "A Haunting in Venice",
+          age: 12,
+          duration: 1.44,
+          imageString:
+            "https://image.tmdb.org/t/p/original/kHlX3oqdD4VGaLpB8O78M25KfdS.jpg",
+          overview:
+            "Celebrated sleuth Hercule Poirot, now retired and living in self-imposed exile in Venice, reluctantly attends a Halloween séance at a decaying, haunted palazzo. When one of the guests is murdered, the detective is thrust into a sinister world of shadows and secrets.",
+          release: 2023,
+          videoSource: "",
+          category: "movie",
+          youtubeString: "https://www.youtube.com/embed/yEddsSwweyE",
+        },
+        {
+          id: 12,
+          title: "Gran Turismo",
+          age: 12,
+          duration: 2.15,
+          overview:
+            "The ultimate wish-fulfillment tale of a teenage Gran Turismo player whose gaming skills won him a series of Nissan competitions to become an actual professional racecar driver.",
+          videoSource:"",
+          imageString:
+            "https://image.tmdb.org/t/p/original/r7DuyYJ0N3cD8bRKsR5Ygq2P7oa.jpg",
+          release: 2023,
+          category: "movie",
+          youtubeString: "https://www.youtube.com/embed/GVPzGBvPrzw",
         },
       ],
     });

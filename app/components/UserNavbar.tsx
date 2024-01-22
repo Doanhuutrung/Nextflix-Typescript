@@ -26,9 +26,9 @@ export default function UserNav() {
       <DropdownMenuContent className="w-56" align="end" forceMount>
         <DropdownMenuLabel>
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">test</p>
+            <p className="text-sm font-medium leading-none">user</p>
             <p className="text-sm leading-none text-muted-foreground">
-              test@gmail.com
+              user@gmail.com
             </p>
           </div>
         </DropdownMenuLabel>
