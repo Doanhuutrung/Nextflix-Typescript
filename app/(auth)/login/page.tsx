@@ -23,6 +23,7 @@ export default async function Login() {
             name="email"
             placeholder="Email"
             className="bg-[#333] placeholder:text-xs placeholder:text-gray-400 w-full inline-block"
+            required
           />
           <Button
             type="submit"
