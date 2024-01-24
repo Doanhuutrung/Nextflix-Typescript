@@ -5,6 +5,7 @@ import GoogleSignInButton from "@/app/components/GoogleSignInButton";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/utils/auth";
 import { redirect } from "next/navigation";
+import GitHubSignInButton from "@/app/components/GitHubSignInButton";
 
 export default async function SignUp() {
   const session = await getServerSession(authOptions);
@@ -40,6 +41,7 @@ export default async function SignUp() {
       </div>
 
       <div className="flex w-full justify-center items-center gap-x-3 mt-6">
+        <GitHubSignInButton/>
         <GoogleSignInButton />
       </div>
     </div>
